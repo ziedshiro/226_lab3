@@ -10,8 +10,13 @@ int main()
             n/=i;
             printf("%d\n",i);
         }
+        else if(n==1)
+        {
+            printf("%d",0);break;
+        }
+
         else
         i++;
-    }while(n>1);
-    printf("0");
+    }while(n>0);
+
 }
