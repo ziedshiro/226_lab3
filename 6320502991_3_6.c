@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,k=2,rn=0,N;
+    int n,i,k,rn,N,x=0;
     scanf("%d",&n);
     do
     {
@@ -25,8 +25,9 @@ int main()
         n--;
     else
     {
-        printf("%d",n);break;
+        printf("%d",n);
+        x=1;
     }
-    }while(1);
+    }while(x!=1);
 
 }
