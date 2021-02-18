@@ -10,9 +10,15 @@ int main()
         for(j=0;j<2;j++)
         scanf("%d",&N[i][j]);
     for(k=0;k<48;k++)
+    {
         for(i=0;i<n;i++)
-                    if(N[i][0]==k)
-                      K[i]+=N[i][1];
+                    if(N[i][0]==k+1)
+                    {
+                        K[k]+=N[i][1];
+                    }
+    }
+
+
     max=K[0];
     for(i=0;i<48;i++)
         if(max<K[i])
@@ -20,5 +26,5 @@ int main()
         max=K[i];
         km=i;
     }
-    printf("%d %d",km+1,K[i]);
+    printf("%d %d",km+1,max);
 }
