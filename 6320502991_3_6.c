@@ -1,8 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,k=2,x;
+    int n,i,k=2,rn=1,N;
     scanf("%d",&n);
+    do
+    {
+        k=2;
+        rn=1;
     do
     {
         if(n%k==0)
@@ -10,7 +14,22 @@ int main()
         else
             k++;
     }while(n!=k);
-    printf("%d",n);
+    N=n;
 
+    do
+    {
+    i=N%10;
+    rn=(rn*10)+i;
+    N/=10;
+    }while(N>0);
+
+    if(n!=rn)
+        n--;
+    else
+    {
+        printf("%d",n);break;
+    }
+
+    }while(1);
 
 }
