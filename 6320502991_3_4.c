@@ -17,6 +17,8 @@ int main()
     }
     if(x[n]==n)
         printf("%d",n);
+    else if(n==1)
+        printf("1");
     else
         printf("%d",x[n-1]);
 
